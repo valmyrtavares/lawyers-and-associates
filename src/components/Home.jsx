@@ -69,6 +69,14 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Desktop Inline Navigation */}
+        <nav className="desktop-nav">
+          <button className={`nav-btn ${currentPage === 'home' ? 'active' : ''}`} onClick={() => navigateTo('home')}>Home</button>
+          <button className={`nav-btn ${currentPage === 'advogados' ? 'active' : ''}`} onClick={() => navigateTo('advogados')}>Advogados</button>
+          <button className={`nav-btn ${currentPage === 'noticias' ? 'active' : ''}`} onClick={() => navigateTo('noticias')}>Notícias & Artigos</button>
+          <button className={`nav-btn ${currentPage === 'contato' ? 'active' : ''}`} onClick={() => navigateTo('contato')}>Contato</button>
+        </nav>
+
         {/* Hamburger Menu Toggle Button */}
         <button 
           className="hamburger-btn" 

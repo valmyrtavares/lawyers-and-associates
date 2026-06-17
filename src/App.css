@@ -44,11 +44,45 @@ html, body, #root {
   background: linear-gradient(to bottom, rgba(9, 10, 15, 0.8), transparent);
 }
 
+.desktop-nav {
+  display: flex;
+  gap: 40px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f06949;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.85;
+}
+
+.nav-btn:hover {
+  opacity: 1;
+  border-bottom: 2px solid #f06949;
+}
+
+.nav-btn.active {
+  opacity: 1;
+  border-bottom: 2px solid #f06949;
+  text-shadow: 0 0 8px rgba(240, 105, 73, 0.4);
+}
+
 .hamburger-btn {
   background: none;
   border: none;
   cursor: pointer;
-  display: flex;
+  display: none; /* Hidden on desktop */
   flex-direction: column;
   gap: 7px;
   padding: 10px;
@@ -614,6 +648,14 @@ html, body, #root {
 }
 
 @media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
   .home-header {
     padding: 0 24px;
     height: 80px;
@@ -624,21 +666,21 @@ html, body, #root {
   }
 
   .brand-title {
-    font-size: 2.2rem;
-    letter-spacing: 10px;
-    margin-right: -10px;
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+    margin-right: -8px;
   }
 
   .brand-subtitle {
-    font-size: 3.6rem;
-    letter-spacing: 6px;
-    margin-right: -6px;
+    font-size: 2.6rem;
+    letter-spacing: 4px;
+    margin-right: -4px;
   }
 
   .brand-tagline {
-    font-size: 0.85rem;
-    letter-spacing: 6px;
-    margin-right: -6px;
+    font-size: 0.68rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
     padding-top: 14px;
   }
 }
