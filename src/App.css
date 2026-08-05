@@ -480,6 +480,8 @@ html, body, #root {
 .contact-info {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .contact-info-title {
@@ -489,6 +491,7 @@ html, body, #root {
   margin-bottom: 14px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  text-align: center;
 }
 
 .contact-info-text {
@@ -496,20 +499,25 @@ html, body, #root {
   font-size: 1rem;
   margin-bottom: 30px;
   line-height: 1.5;
+  text-align: center;
 }
 
 .contact-details {
   display: flex;
   flex-direction: column;
   gap: 22px;
+  align-items: center;
+  width: 100%;
 }
 
 .detail-item {
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
   color: var(--text-secondary);
   font-size: 0.95rem;
+  text-align: center;
 }
 
 .detail-icon {
@@ -737,8 +745,43 @@ html, body, #root {
     gap: 30px;
   }
   
+  .services-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .services-sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 8px;
+    gap: 8px;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+
+  .service-tab-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 0.76rem;
+    padding: 12px 16px;
+    letter-spacing: 1px;
+  }
+
+  .services-content-card {
+    padding: 28px 22px;
+    min-height: auto;
+    max-height: 440px;
+    overflow-y: auto;
+  }
+
+  .service-detail-title {
+    font-size: 1.45rem;
+    letter-spacing: 1px;
+  }
+  
   .section-inner-container {
-    padding: 0 30px;
+    padding: 0 24px;
   }
   
   .contact-form {
